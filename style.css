@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.section {
+    padding: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: normal;
+}
+
+.warning {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.intro-content {
+    line-height: 1.8;
+}
+
+.intro-content p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.schools-list {
+    margin: 20px 0;
+}
+
+.school-item {
+    background: #f8f9fa;
+    border-left: 3px solid #666;
+    padding: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.school-item strong {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-primary {
+    background: #333;
+    color: white;
+    border: 1px solid #000;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+    font-weight: normal;
+}
+
+.btn-primary:hover {
+    background: #555;
+}
+
+.btn-primary:active {
+    background: #222;
+}
+
+.btn-secondary {
+    background: #666;
+    color: white;
+    border: 1px solid #000;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.btn-secondary:hover {
+    background: #777;
+}
+
+.btn-secondary:active {
+    background: #555;
+}
+
+.btn-secondary:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    border-color: #999;
+}
+
+/* Quiz Section */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e0e0e0;
+    border: 1px solid #999;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #666;
+    width: 0%;
+}
+
+.question-container {
+    text-align: center;
+}
+
+.question-number {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.question-text {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 500;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.answer-btn {
+    background: white;
+    border: 1px solid #666;
+    color: #333;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: normal;
+    text-align: left;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background: #f0f0f0;
+}
+
+.answer-btn.selected {
+    background: #333;
+    color: white;
+    border-color: #000;
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+/* Results Section */
+.results-container {
+    margin: 30px 0;
+}
+
+.result-item {
+    margin-bottom: 25px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.result-label {
+    min-width: 200px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.result-bar {
+    flex: 1;
+    height: 30px;
+    background: #e0e0e0;
+    border: 1px solid #999;
+    overflow: hidden;
+    position: relative;
+}
+
+.result-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    color: white;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .question-text {
+        font-size: 1.2em;
+    }
+
+    .bar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .result-label {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .result-bar {
+        width: 100%;
+    }
+
+    .answers {
+        max-width: 100%;
+    }
+}
+
