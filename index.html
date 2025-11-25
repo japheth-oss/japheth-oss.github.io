@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catholic Schools of Thought Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="intro" class="section">
+            <h1>Catholic Schools of Thought Test</h1>
+            <div class="warning">
+                <strong>Note:</strong> This test explores various Catholic philosophical and theological traditions.
+            </div>
+            <div class="intro-content">
+                <h2>What is this test?</h2>
+                <p>
+                    This test attempts to identify your alignment with various Catholic schools of thought
+                    such as Thomism, Scotism, Augustinianism, Molinism, and others. You will be presented
+                    with statements, and you will answer with your opinion from <strong>Strongly Agree</strong>
+                    to <strong>Strongly Disagree</strong>, with each answer affecting your scores. At the end
+                    of the quiz, your answers will be compared to the maximum possible for each school,
+                    giving you a percentage. Answer honestly!
+                </p>
+
+                <h2>What are the schools of thought?</h2>
+                <div class="schools-list">
+                    <div class="school-item">
+                        <strong>Thomism</strong> - Based on St. Thomas Aquinas, emphasizes the real distinction between essence and existence,
+                        the priority of intellect over will, the analogy of being, and intrinsic efficacy of grace.
+                    </div>
+                    <div class="school-item">
+                        <strong>Scotism</strong> - Based on Blessed John Duns Scotus, emphasizes univocity of being, the priority of will over intellect,
+                        the formal distinction, and the theological necessity of the Immaculate Conception.
+                    </div>
+                    <div class="school-item">
+                        <strong>Augustinianism</strong> - Based on St. Augustine, emphasizes the corruption of the will by original sin,
+                        the necessity of irresistible grace, predestination not based on foreseen merits, and divine illumination.
+                    </div>
+                    <div class="school-item">
+                        <strong>Molinism</strong> - Based on Luis de Molina, emphasizes middle knowledge (scientia media),
+                        libertarian free will, and predestination based on foreknowledge rather than prior decrees.
+                    </div>
+                    <div class="school-item">
+                        <strong>Banezianism</strong> - Dominican school emphasizing physical premotion, predestination prior to foreknowledge,
+                        and grace efficacious by God's action rather than human cooperation.
+                    </div>
+                    <div class="school-item">
+                        <strong>Bonaventurianism</strong> - Based on St. Bonaventure, emphasizes divine illumination, Platonic metaphysics,
+                        the inseparability of intellectual and affective knowledge, and the Franciscan spiritual tradition.
+                    </div>
+                    <div class="school-item">
+                        <strong>Suarezianism</strong> - Based on Francisco Suárez, emphasizes conceptual (not real) distinction between essence and existence,
+                        rejection of physical premotion, and synthesis of various scholastic traditions.
+                    </div>
+                    <div class="school-item">
+                        <strong>Nominalism</strong> - Based on William of Ockham, emphasizes that universals are merely mental constructs,
+                        God's will as the foundation of morality, and the separation of faith and reason.
+                    </div>
+                    <div class="school-item">
+                        <strong>Lullism</strong> - Based on Ramon Llull, emphasizes a universal logical-combinatorial method for evangelization,
+                        demonstration of theological truths through rational diagrams, and systematic combination of divine attributes.
+                    </div>
+                    <div class="school-item">
+                        <strong>Latin Averroism</strong> - Emphasizes the autonomy of philosophy from theology, the possibility of parallel truths,
+                        and Aristotelian philosophy as the best description of the natural world, even if contrary to theology.
+                    </div>
+                </div>
+
+                <button id="start-btn" class="btn-primary">Begin Test</button>
+            </div>
+        </div>
+
+        <div id="quiz" class="section hidden">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div class="question-container">
+                <div id="question-number" class="question-number"></div>
+                <div id="question-text" class="question-text"></div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="2">Strongly Agree</button>
+                    <button class="answer-btn" data-value="1">Agree</button>
+                    <button class="answer-btn" data-value="0">Neutral</button>
+                    <button class="answer-btn" data-value="-1">Disagree</button>
+                    <button class="answer-btn" data-value="-2">Strongly Disagree</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="prev-btn" class="btn-secondary" disabled>Previous Question</button>
+                    <button id="next-btn" class="btn-secondary" style="display: none;">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results" class="section hidden">
+            <h1>Your Results</h1>
+            <div id="results-container" class="results-container"></div>
+            <button id="restart-btn" class="btn-primary">Take Test Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
